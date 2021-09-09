@@ -7,7 +7,7 @@ export default class ApiService {
   }
 
   fetchGetImages() {
-    return fetch(`${BASE_FETCH_URL}key=${API_KEY}&q=${this.searchQueary}}t&page=${this.page}&per_page=12&image_type=photo`)
+    return fetch(`${BASE_FETCH_URL}key=${API_KEY}&q=${this.searchQueary}t&page=${this.page}&per_page=12&image_type=photo`)
       .then(response => response.json())
       .then(data => {
         this.incrementPage();
