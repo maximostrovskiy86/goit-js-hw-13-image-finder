@@ -24,7 +24,7 @@ const onLoadMore = () => {
       behavior: 'smooth',
       block: 'start',
     });
-  }, 350);
+  }, 550);
 
   newApiServise.fetchGetImages().then(appendImagesMarkup);
 }
