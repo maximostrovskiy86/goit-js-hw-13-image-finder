@@ -7,8 +7,11 @@ export default class ApiService {
   }
 
   fetchGetImages() {
+    const url =  `${BASE_FETCH_URL}key=${API_KEY}&q=${this.searchQueary}&page=${this.page}&per_page=12&image_type=photo`;
+    console.log(url)
+    return fetch(url)
     // return fetch(`${BASE_FETCH_URL}key=${API_KEY}&q=${this.searchQueary}&page=${this.page}&per_page=12&image_type=photo`)
-    return fetch('https://pixabay.com/api/?key=23297096-fdec21a8bcbab7faa251f0233&q=cat&page=1&per_page=12&image_type=photo ')
+    // return fetch('https://pixabay.com/api/?key=23297096-fdec21a8bcbab7faa251f0233&q=cat&page=1&per_page=12&image_type=photo ')
       .then(response => response.json())
       .then(data => {
         this.incrementPage();
