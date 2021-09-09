@@ -24,9 +24,11 @@ const onLoadMore = () => {
       behavior: 'smooth',
       block: 'start',
     });
-  }, 550);
+  }, 450);
 
-  newApiServise.fetchGetImages().then(appendImagesMarkup);
+  newApiServise.fetchGetImages()
+    .then(appendImagesMarkup)
+    .catch(err => console.log(err));
 }
 
 const clearGalleryList = function () {
